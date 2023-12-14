@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -8,43 +9,56 @@
 body {
   background-color: hsl(30, 38%, 92%);
   min-height: 100vh;
-  justify-content: center;
   display: flex;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
+.container {
+  display: flex;
+  max-width: 42rem;
+  border-radius: .5rem;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
 
-#cart-txt {
-  color: hsl(0, 0%, 100%);
-  padding: 0.5rem;
 }
 
+.img-container {
+  width: 50%;
+  min-width: 17rem;
+}
 
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wrapper {
+  background-color: hsl(0, 0%, 100%);
+  padding: 2.5rem;
+  width: 50%;
+  min-width: 17rem;
+}
+
+.top {
+  font-size: .85rem;
+  letter-spacing: .3rem;
+  color: hsl(228, 12%, 48%);
+}
 
 .name {
   font-family: "Fraunces", serif;
   font-size: 2.2rem;
-  padding: 2rem 0;
-}
-
-button:hover {
-  background-color: hsl(172, 25%, 22%);
-}
-
-#icon-cart {
-  height: 1rem;
-  width: 1rem;
+  padding: 1.5rem 0;
 }
 
 .description {
-  font-size: 0.95rem;
-  font-family: "Montserrat", sans-serif;
+  /* font-size: 0.95rem; */
   color: hsl(228, 12%, 48%);
   line-height: 1.5rem;
 }
-
-
-
 
 .price-container {
   display: flex;
@@ -56,12 +70,11 @@ button:hover {
   padding: 1rem;
   font-size: 1rem;
   color: hsl(228, 12%, 48%);
-  font-family: "Montserrat", sans-serif;
 }
 
 .new-price {
   color: hsl(158, 36%, 37%);
-  font-size: 2.3rem;
+  font-size: 2.15rem;
   font-family: "Fraunces", serif;
 }
 
@@ -73,32 +86,70 @@ button {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 3.5rem;
+  height: 3rem;
   border: none;
 }
-#top {
-  letter-spacing: 0.2rem;
+
+button:hover {
+  background-color: hsl(172, 25%, 22%);
+  cursor: pointer;
 }
 
-.wrapper {
-  background-color: hsl(0, 0%, 100%);
-  padding: 2rem;
+#cart-txt {
+  color: hsl(0, 0%, 100%);
+  padding: 0.5rem;
 }
 
 .attribution {
-  text-align: center;
+  padding-top: 2rem;
+  display: flex;
   font-size: 0.7rem;
   color: hsl(228, 45%, 44%);
+  gap: 1px;
 }
 
-a {
-  padding-left: 2px;
-}
 
-@media screen and (max-width: 375px) {
+@media only screen and (max-width: 540px) {
   .container {
-    max-width: 20rem;
-    display: block;
+    display: grid;
+    max-width: 25rem;
+    margin: 1rem;
+  }
+  .img-container {
+    width: 100%;
   }
 
+  .product-img {
+    content: url("./images/image-product-mobile.jpg");
+  }
+
+
+  .wrapper {
+    width: 100%;
+    padding: 1rem 1.5rem;
+  }
+
+  .description{
+    font-size: 0.875rem;
+  }
+
+  .price-container{
+    padding-bottom: 1rem;;
+  }
+
+  .top{
+font-size: .75rem;
+  }
+
+
+  .name{
+    padding: 1rem 0;
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+
+
+  .old-price{
+    font-size: 0.8rem;
+  }
 }
