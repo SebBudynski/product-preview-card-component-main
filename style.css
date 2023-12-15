@@ -16,14 +16,14 @@ body {
 .container {
   display: flex;
   max-width: 38.2rem;
-  border-radius: .5rem;
+  border-radius: .7rem;
   overflow: hidden;
   font-family: "Montserrat", sans-serif;
 }
 
 .img-container {
   width: 50%;
-  min-width: 15rem;
+  min-width: 17rem;
 }
 
 .product-img {
@@ -36,7 +36,7 @@ body {
   background-color: hsl(0, 0%, 100%);
   padding: 2rem;
   width: 50%;
-  min-width: 15rem;
+  min-width: 17rem;
 }
 
 .top {
@@ -127,12 +127,9 @@ body {
     padding: 1rem 1.5rem;
   }
 
-  .description{
-    font-size: 0.875rem;
-  }
 
   .price-container{
-    padding-bottom: 1rem;;
+    padding-bottom: 1rem;
   }
 
   .top{
@@ -146,8 +143,4 @@ font-size: .75rem;
     line-height: 2.2rem;
   }
 
-
-  .old-price{
-    font-size: 0.8rem;
-  }
 }
