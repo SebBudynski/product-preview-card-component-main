@@ -23,7 +23,7 @@ body {
 
 .img-container {
   width: 50%;
-  min-width: 12rem;
+  min-width: 16rem;
 }
 
 .product-img {
@@ -36,7 +36,7 @@ body {
   background-color: hsl(0, 0%, 100%);
   padding: 2rem;
   width: 50%;
-  min-width: 12rem;
+  min-width: 16rem;
 }
 
 .top {
