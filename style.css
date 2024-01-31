@@ -19,7 +19,7 @@ body {
   flex-direction: column;
 }
 
-.container {
+.card {
   display: flex;
   max-width: 38.2rem;
   border-radius: 11px;
@@ -27,63 +27,64 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.img-container {
+.card__img-container {
   width: 50%;
   min-width: 16rem;
 }
 
-.product-img {
+.card__img-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.wrapper {
+.card__info {
   background-color: hsl(0, 0%, 100%);
   padding: 2rem;
   width: 50%;
   min-width: 16rem;
 }
 
-.top {
+.card__info > :first-child {
+  color: var(--gray);
   font-size: 0.85rem;
   letter-spacing: 0.3rem;
-  color: var(--gray);
+  padding-top: 0.75rem;
 }
 
-.name {
+.card__info h1 {
   font-family: "Fraunces", serif;
   font-size: 2.2rem;
   padding: 1.5rem 0;
 }
 
-.description {
-  font-size: 0.9rem;
+.card__description {
   color: var(--gray);
+  font-size: 0.9rem;
   line-height: 1.5rem;
 }
 
-.price-container {
+.card__prices {
+  align-items: center;
   display: flex;
   padding: 1.5rem 0;
-  align-items: center;
 }
 
-.old-price {
+.card__prices p {
   text-decoration: line-through;
   padding: 1rem;
   font-size: 0.85rem;
   color: var(--gray);
 }
 
-.new-price {
+.card__prices--new {
   color: var(--green);
   font-size: 2.15rem;
   font-family: "Fraunces", serif;
 }
 
-.btn {
+.card__info button {
   align-items: center;
   background-color: var(--green);
   border-radius: 0.5rem;
@@ -98,7 +99,7 @@ body {
   width: 100%;
 }
 
-.btn:hover {
+button:hover {
   background-color: var(--dark-green);
   cursor: pointer;
 }
@@ -112,36 +113,32 @@ body {
 }
 
 @media only screen and (max-width: 540px) {
-  .container {
+  .card {
     display: block;
     max-width: 25rem;
     margin: 1rem;
   }
 
-  .img-container {
+  .card__img-container {
     width: 100%;
   }
 
-  .product-img {
+  .card__img-container img {
     content: url("./images/image-product-mobile.jpg");
   }
 
-  .wrapper {
+  .card__info {
     width: 100%;
     padding: 1rem 1.5rem;
   }
-
-  .price-container {
-    padding-bottom: 1rem;
-  }
-
-  .top {
-    font-size: 0.75rem;
-  }
-
-  .name {
+  
+  .card__info h1{
     padding: 1rem 0;
     font-size: 2rem;
     line-height: 2.2rem;
+  }
+
+  .card__prices {
+    padding-bottom: 1rem;
   }
 }
